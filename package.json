@@ -1,0 +1,19 @@
+{
+  "name": "to-do-list",
+  "version": "1.0.0",
+  "description": "",
+  "main": "startClick.js",
+  "scripts": {
+    "start": "live-server --open=client --port=3000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hill0ne/learning-todolist.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hill0ne/learning-todolist/issues"
+  },
+  "homepage": "https://github.com/hill0ne/learning-todolist#readme"
+}
