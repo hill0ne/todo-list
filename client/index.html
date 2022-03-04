@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>to do list</title>
+    <script src="https://kit.fontawesome.com/47700574a2.js" crossorigin="anonymous"></script>
+    <link href="./style/style.css" rel="stylesheet">
+    <script src="./js/index.js" defer></script>
+</head>
+<body>
+    <section class="list--container">
+        <header>to do list</header>
+        <ul id="list" class="items">
+            <li class="item__row">
+                <div class="item">
+                    <span class="item__content">광복이 산책가기</span>
+                    <div class="button__container">
+                        <button class="item__delete">
+                            <i class="fa fa-light fa-trash-can"></i>
+                        </button>
+                        <button class="item__special">
+                            <i class="fa fa-light fa-star"></i>
+                        </button>
+                    </div>
+                </div>
+                    <div class="divider"></div>
+            </li>
+        </ul>
+        <footer>
+            <input type="text" class="footer--input">
+            <button class="footer__button">
+                <i class="fa fa-solid fa-pen"></i>
+            </button>
+        </footer>
+    </section>
+
+</body>
+</html>
