@@ -1,10 +1,17 @@
-// 1. 사용자의 input 내용을 받아온다.
-
+const body = document.querySelector("body");
 const footerBtn = document.querySelector(".footer--button");
 const input = document.querySelector(".footer--input");
 const items = document.querySelector(".items");
 const item = document.querySelector(".item__row");
 const delBtn = document.querySelector(".item__delete");
+
+(function onFocus() {
+  input.focus();
+  body.addEventListener("click", (e) => {
+    e.preventDefault();
+    input.focus();
+  });
+})();
 
 function onAdd() {
   const text = input.value;
@@ -73,6 +80,3 @@ input.addEventListener("keyup", (e) => {
     onAdd();
   }
 });
-// delBtn.addEventListener("click", () => {
-//   items.removeChild(item);
-// });
