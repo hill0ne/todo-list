@@ -3,7 +3,7 @@
 const footerBtn = document.querySelector(".footer--button");
 const input = document.querySelector(".footer--input");
 const items = document.querySelector(".items");
-let item = document.querySelector(".item__row");
+const item = document.querySelector(".item__row");
 const delBtn = document.querySelector(".item__delete");
 
 function onAdd() {
@@ -49,7 +49,7 @@ const createItem = function (text) {
   specialBtn.innerHTML = `<i class="fa fa-light fa-star"></i>`;
   specialBtn.addEventListener("click", () => {
     items.prepend(itemRow);
-    itemRow.style.color = "red";
+    itemRow.style.cssText = "color: red; font-weight: bold";
   });
 
   ButnContainer.appendChild(delBtn);
@@ -68,6 +68,11 @@ const createItem = function (text) {
 };
 
 footerBtn.addEventListener("click", onAdd);
+input.addEventListener("keyup", (e) => {
+  if (e.key === "Enter") {
+    onAdd();
+  }
+});
 // delBtn.addEventListener("click", () => {
 //   items.removeChild(item);
 // });
