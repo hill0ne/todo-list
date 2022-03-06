@@ -95,11 +95,11 @@ footer {
   transform: translateY(-15px);
 }
 
-.footer__button {
+.footer--button {
   background-color: #ffccd2;
   transform: translateY(-8px);
 }
 
-.footer__button:hover {
+.footer--button:hover {
   color: #f9f9f9;
 }
