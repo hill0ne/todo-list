@@ -3,7 +3,8 @@
 const footerBtn = document.querySelector(".footer--button");
 const input = document.querySelector(".footer--input");
 const items = document.querySelector(".items");
-const li = document.querySelector(".item__row");
+let item = document.querySelector(".item__row");
+const delBtn = document.querySelector(".item__delete");
 
 function onAdd() {
   const text = input.value;
@@ -39,10 +40,17 @@ const createItem = function (text) {
   const delBtn = document.createElement("button");
   delBtn.setAttribute("class", "item__delete");
   delBtn.innerHTML = `<i class="fa fa-light fa-trash-can"></i>`;
+  delBtn.addEventListener("click", () => {
+    items.removeChild(itemRow);
+  });
 
   const specialBtn = document.createElement("button");
   specialBtn.setAttribute("class", "item__special");
   specialBtn.innerHTML = `<i class="fa fa-light fa-star"></i>`;
+  specialBtn.addEventListener("click", () => {
+    items.prepend(itemRow);
+    itemRow.style.color = "red";
+  });
 
   ButnContainer.appendChild(delBtn);
   ButnContainer.appendChild(specialBtn);
@@ -54,20 +62,12 @@ const createItem = function (text) {
   item.appendChild(ButnContainer);
 
   itemRow.appendChild(item);
-
-  //   let lastChild = itemRow.lastChild;
-  //   lastChild = divider;
-  //   console.log(lastChild);
   //   itemRow.appendChild(divider);
 
-  //   items.appendChild(itemRow);
   return itemRow;
 };
 
 footerBtn.addEventListener("click", onAdd);
-
-// 2. 받아온 내용을 새로운 item으로 추가한다. + 버튼도 함께
-
-// 3. 컨테이너 안에 item을 추가한다.
-
-// 4. input 내용을 초기화 한다.
+// delBtn.addEventListener("click", () => {
+//   items.removeChild(item);
+// });
