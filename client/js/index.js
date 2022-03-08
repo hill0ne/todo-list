@@ -1,3 +1,4 @@
+const form = document.querySelector(".new-form");
 const body = document.querySelector("body");
 const footerBtn = document.querySelector(".footer--button");
 const input = document.querySelector(".footer--input");
@@ -13,6 +14,11 @@ const delBtn = document.querySelector(".item__delete");
   });
 })();
 
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  onAdd();
+});
+
 function onAdd() {
   const text = input.value;
 
@@ -24,6 +30,7 @@ function onAdd() {
   const item = createItem(text);
   items.appendChild(item);
   item.scrollIntoView({ block: "center" });
+
   input.value = "";
   input.focus();
 }
@@ -39,10 +46,10 @@ const createItem = function (text) {
   <div class="item">
     <span class="item__content">${text}</span>
       <div class="button__container">
-      <button class="item__delete">
+      <button class="item__delete" type="submit">
           <i class="fa fa-light fa-trash-can" id="trash" data-id=${id}></i>
       </button>
-      <button class="item__special">
+      <button class="item__special" type="submit">
           <i class="fa fa-light fa-star" id="star" data-id=${id}></i>
       </button>
     </div>
@@ -52,17 +59,16 @@ const createItem = function (text) {
   return itemRow;
 };
 
-footerBtn.addEventListener("click", onAdd);
-input.addEventListener("keyup", (e) => {
-  if (e.key === "Enter") {
-    onAdd();
-  }
-});
+// footerBtn.addEventListener("click", onAdd);
+// input.addEventListener("keyup", (e) => {
+//   if (e.key === "Enter") {
+//     onAdd();
+//   }
+// });
 
 items.addEventListener("click", (e) => {
   const id = e.target.dataset.id;
   const selected = document.querySelector(`.item__row[data-id="${id}"]`);
-  console.log(selected);
   if (e.target.id === "trash") {
     selected.remove();
   } else if (e.target.id === "star") {
