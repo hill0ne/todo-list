@@ -1,0 +1,100 @@
+* {
+  position: relative;
+}
+
+.checkboxImg {
+  top: 2rem;
+  left: 2rem;
+  width: 7rem;
+  height: 7rem;
+}
+
+.sendIcon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.headline {
+  display: inline-block;
+  color: var(--font-color-black);
+  font-size: 4rem;
+  left: 3rem;
+  margin: 0;
+}
+
+.message {
+  width: 38rem;
+  height: 7rem;
+  top: 1rem;
+  left: 12rem;
+  margin: 0.4em 0 0 0;
+  font-size: 3rem;
+  line-height: 6rem;
+  text-align: center;
+  border-radius: 0 20rem 20rem 20rem;
+  color: var(--font-color-black);
+  background-color: var(--textbox-color-yellow);
+}
+
+.message--first {
+  width: 22rem;
+}
+
+.timeRecords {
+  top: -1rem;
+  left: 50rem;
+  color: #646464;
+}
+
+.userInput {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 38rem;
+  height: 7rem;
+  top: 6rem;
+  left: 50rem;
+  border-radius: 20rem 0 20rem 20rem;
+  background-color: var(--textbox-color-yellow);
+  color: var(--font-color-black);
+}
+
+.responseBox {
+  width: 25rem;
+  height: 5rem;
+  margin-left: 0.8em;
+  font-size: 3rem;
+  border: none;
+  outline: none;
+  background-color: var(--textbox-color-yellow);
+}
+
+.sendButton {
+  width: 5.5rem;
+  height: 5.5rem;
+  right: 2em;
+  border: none;
+  border-radius: 3rem;
+}
+
+.sendButton:hover,
+.sendIcon:hover {
+  cursor: pointer;
+}
+
+.sendIcon {
+  width: 4rem;
+  height: 4rem;
+  top: 0.3rem;
+  left: 74.4rem;
+  opacity: 0.8;
+}
+.sendIcon:hover {
+  transform: scale(1.1);
+}
+
+.clickMessage {
+  top: -5.5rem;
+  left: 53.5rem;
+  color: var(--font-color-black);
+}

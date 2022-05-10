@@ -1,0 +1,6 @@
+* {
+  box-sizing: border-box;
+  --font-color-black: #272727;
+  --textbox-color-yellow: #fffa4d;
+  --color-white: #ffffff;
+}
