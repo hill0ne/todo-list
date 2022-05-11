@@ -1,5 +1,7 @@
 const send = document.querySelector(".sendIcon");
+const button = document.querySelector(".sendButton");
 const time = document.querySelector(".timeRecords");
+const input = document.querySelector(".input--response");
 
 const date = new Date();
 const hours = date.getHours();
@@ -17,6 +19,23 @@ if (hours < 13) {
 
 time.innerText = mood + (hours - standard) + ":" + minutes;
 
-send.addEventListener("click", () => {
+function changeLocation() {
   location.href = "list/list.html";
+}
+
+send.addEventListener("keyup", (e) => {
+  if (e.key === "Enter") {
+    changeLocation();
+  }
+});
+
+input.addEventListener("keyup", (e) => {
+  if (e.key === "Enter") {
+    changeLocation();
+  }
+});
+button.addEventListener("keyup", (e) => {
+  if (e.key === "Enter") {
+    changeLocation();
+  }
 });

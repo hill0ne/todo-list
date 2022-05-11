@@ -59,7 +59,7 @@
   color: var(--font-color-black);
 }
 
-.responseBox {
+.input--response {
   width: 25rem;
   height: 5rem;
   margin-left: 0.8em;
